@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { useContext } from "react"
 import { AuthContext } from "./AuthProvider"
+import './style.css';
 
 const Navbar = () => {
 
@@ -11,14 +12,15 @@ const handleClickLogout = () => {
     };
 
   return (
-<nav>
-    <Link to='/'>Home</Link>
-    <Link to='/companies'>Browse Companies</Link>
+<nav className="navbar navbar-expand-md navbar-dark bg-dark navbar-nav nav-item nav-link active">
+    <div className="container">
+    <Link className="nav-link" to='/'>Home</Link>
+    <Link className="nav-link" to='/companies'>Trending Companies</Link>
 
 {!user &&
 <>
- <Link to='/signup'>Signup</Link>
-<Link to='/login'>Login</Link>
+ <Link className="nav-link" to='/signup'>Sign up</Link>
+<Link className="nav-link" to='/login'>Log in</Link>
 </>
 
 }
@@ -27,7 +29,7 @@ const handleClickLogout = () => {
     <button onClick={handleClickLogout}>Logout</button >
 
  }
-
+</div>
 </nav>
   )
 }

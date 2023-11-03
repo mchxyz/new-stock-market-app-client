@@ -34,15 +34,20 @@ export const LoginPage = () => {
     
     return (
         <div>
-            <h1>Login</h1>
+            <h1 className="container d-flex justify-content-center">Log in</h1>
+            <div className="container d-flex justify-content-center">
             <form onSubmit={handleSubmitForm}>
-                <label>Username</label> <br />
-                <input type="text" name="username" onChange={handleChangeUsername} value={username} /> <br />
-                <label>Password</label> <br />
-                <input type="password" name="password" onChange={handleChangePassword} value={password} /> <br />
-                <label>Confirm password</label> <br />
-                <input type="submit" />
+                <div className="mb-3">
+                <label className="container d-flex justify-content-center">Username</label> <br />
+                <input className="container d-flex justify-content-center" type="text" name="username" onChange={handleChangeUsername} value={username} /> <br />
+                <label className="container d-flex justify-content-center">Password</label> <br />
+                <input className="container d-flex justify-content-center" type="password" name="password" onChange={handleChangePassword} value={password} /> <br />
+                <label className="container d-flex justify-content-center">Confirm password</label> <br />
+                <input className="container d-flex justify-content-center" type="submit" />
+                </div>
             </form>
+            </div>
         </div>
     );
 };
+
